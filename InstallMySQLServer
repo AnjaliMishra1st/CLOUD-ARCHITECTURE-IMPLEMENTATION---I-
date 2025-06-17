@@ -1,0 +1,22 @@
+Step 29: sudo apt install mysql-server 
+Step 30: sudo nano /etc/mysql/my.cnf 
+Step 30.1: Add the following line in the file at the bottom 
+Step 30.2: Ctrl +s [Save] and Ctrl +x [Exit] 
+Step 31: sudo systemctl restart mysql 
+Step 32: sudo mysql_secure_installation 
+Step 32.1: Ensure to provide “Y” for all the places where it is asking for. 
+Step 32.2: For password strength please select “0” 
+Step 33: sudo mysql 
+Step 34: Perform the following steps: 
+Step 34.1: CREATE DATABASE `cloud`; 
+Step 34.2: CREATE DATABASE `cloud_usage`; 
+Step 34.3: CREATE USER cloud@'localhost' identified by '123@Msql'; 
+Step 34.4:  CREATE USER cloud@'%' identified by '1234@Sql'; 
+Step 34.5: GRANT ALL ON cloud.* to cloud@`localhost`; 
+Step 34.6: GRANT ALL ON cloud.* to cloud@`%`; 
+Step 34.7: GRANT ALL ON cloud_usage.* to cloud@`localhost`; 
+|sudo 
+tee 
+Step 34.8: GRANT ALL ON cloud_usage.* to cloud@`%`; 
+Step 34.9: GRANT process ON *.* TO cloud@`localhost`; 
+Step 34.10: GRANT process ON *.* TO cloud@`%`; 
