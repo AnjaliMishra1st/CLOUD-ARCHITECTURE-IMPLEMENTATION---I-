@@ -1,0 +1,15 @@
+Step 19–21: Install and Start NTP
+
+19: Install ntp for time synchronization.
+
+20: Enable it at boot.
+
+21: Start the NTP service.
+
+Step 22: sudo apt install chrony
+
+Installs Chrony (alternative NTP implementation).
+
+Step 23: sudo apt install openjdk-11-jdk
+
+Installs Java 11 JDK, required for CloudStack.S
