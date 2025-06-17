@@ -1,0 +1,15 @@
+Step 24: Create CloudStack Source List
+
+24: sudo nano /etc/apt/sources.list.d/cloudstack.list
+
+24.1: Visit CloudStack official guide.
+
+24.2: Paste:  deb https://download.cloudstack.org/ubuntu focal 4.18
+24.3: Save and exit.
+Step 25: Add CloudStack Public Key
+wget -O - https://download.cloudstack.org/release.asc | sudo tee /etc/apt/trusted.gpg.d/cloudstack.asc
+Step 26-27: Update Repos
+sudo apt update
+sudo apt-get update
+Step 28: Install CloudStack Management
+sudo apt install cloudstack-management
