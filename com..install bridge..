@@ -1,0 +1,29 @@
+Step 13: sudo apt install bridge-utils
+
+//Installs tools for creating network bridges.
+
+Step 14: sudo brctl addbr cloudbr0
+
+//Creates a new bridge interface called cloudbr0.
+
+Step 15: sudo brctl addif cloudbr0 ens33
+
+//Adds your network interface (e.g., ens33) to the bridge.
+
+Step 16: Edit Netplan File Again
+
+16.1: Visit Ubuntu VINES guide.
+
+16.2: Copy bridge configuration.
+
+16.3: Replace IP, gateway, and interface names.
+
+16.4: Save and exit.
+
+Step 17: sudo netplan apply
+
+//Applies bridge-based configuration.
+
+Step 18: sudo systemctl restart NetworkManager
+
+//Restarts networking services.
