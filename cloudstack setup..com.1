@@ -1,0 +1,29 @@
+Step 1: sudo apt-get update  //Updates the list of available packages 
+Step 2: sudo apt update     //More modern and faster command to fetch package updates.
+Step 3: ip a   // Shows all IP addresses assigned to interfaces
+Step 4: ip r   //Displays routing table to verify default gateway
+Step 5: sudo nano /etc/netplan/01-network-manager-all.yaml (open the file)   //Nano text editor.
+Step 6: Modify Network File
+
+6.1: Delete existing YAML content.
+
+6.2: Open FreeCodeCamp static IP guide.
+
+6.3: Copy YAML config before "Step 4".
+
+6.4: Paste it into the Nano file.
+
+6.5: Save (Ctrl+S) and exit (Ctrl+X).
+Step 7: sudo netplan apply     // Applies the new network configuration.
+
+Step 8: sudo systemctl restart NetworkManager  //Restarts the network manager to reflect changes.
+
+Step 9: hostname --fqdn  //Shows the fully qualified domain name (expected: ubuntu).
+Step 10: Edit /etc/hosts file
+
+10.1: On the 3rd line, add:   <IP Address> apache.cloud.u1 cloud
+10.2: Save and exit.
+
+Step 11: sudo hostnamectl set-hostname cloud  //Changes the system hostname to cloud.
+
+Step 12: hostname --fqdn  //Now should return apache.cloud.u1.
